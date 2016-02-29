@@ -1,0 +1,13 @@
+Source: qt5-webkit-container
+Maintainer: David Tulloh <debian-david@tulloh.id.au>
+Section: web
+Priority: extra
+Standards-Version: 3.9.2
+Build-Depends: qt5-qmake, libqt5webkit5-dev, gstreamer1.0-plugins-base, gstreamer1.0-tools, gstreamer1.0-x, debhelper
+
+Package: qt5-webkit-container
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Displays a webpage
+  This is a very simple program which uses webkit to display a web page.
+  It is primarily designed to allow a program to display a webpage as a GUI.

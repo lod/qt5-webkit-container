@@ -9,8 +9,19 @@ QT       += webkitwidgets
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
+VPATH += ./src
+OBJECTS_DIR = ./build
+MOC_DIR = ./build
+
 TARGET = qt5-webkit-container
 TEMPLATE = app
+
+target.path = /usr/bin
+INSTALLS += target
+
+documentation.path = /usr/share/doc/qt5-webkit-container
+documentation.files = README.md INSTALL.md
+INSTALLS += documentation
 
 
 SOURCES += main.cpp \
