@@ -1,0 +1,10 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Source: https://github.com/firnsy/qt5-webkit-container
+
+Files: *
+Copyright: 2015-2016 Ian Firns
+License: GPL-2+
+
+Files: debian/*
+Copyright: 2016 David Tulloh
+License: GPL-2+

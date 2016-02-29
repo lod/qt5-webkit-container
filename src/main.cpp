@@ -1,11 +1,31 @@
+/* qt5-webkit-container - GPL2+ {{{
+ * Copyright (C) 2016 Ian Firns
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along
+ * with this program; if not, write to the Free Software Foundation, Inc.,
+ * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ * }}} */
+
+#include <iostream>
+
 #include <QApplication>
 #include <QCommandLineParser>
 #include <QDebug>
 
 #include "container.h"
 
-#define DEFAULT_NAME     "webkit-ui"
-#define DEFAULT_VERSION  "0.2"
+#define DEFAULT_NAME     "qt5-webkit-container"
+#define DEFAULT_VERSION  "UNRELEASED"
 
 #define DEFAULT_URL      "http://localhost:3000"
 
@@ -54,6 +74,15 @@ int main(int argc, char *argv[]) {
 
   // process the actual command line arguments given by the user
   parser.process(a);
+
+  // GPL requires that interactive programs inform the user of the licence
+  std::cout << std::endl
+		<< DEFAULT_NAME << ", Copyright (C) 2016 Ian Firns"                 << std::endl
+		<< std::endl
+		<< DEFAULT_NAME << " comes with ABSOLUTELY NO WARRANTY."           << std::endl
+		<< "This is free software, and you are welcome to redistribute it" << std::endl
+		<< "under certain conditions, see LICENCE file for details."       << std::endl
+		<< std::endl;
 
   // process container size
   int width = parser.value(widthOption).toInt();
